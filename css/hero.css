@@ -1,0 +1,100 @@
+/* Variables del hero que utilizan las globales de styles.css */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 600px;
+    height: clamp(600px, 80vh, 800px);
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('../images/hero-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 160px 10% 0;
+    margin-top: 70px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 4vw + 1.5rem, 4.5rem);
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero {
+    display: inline-block;    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.btn-hero:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                         url('../images/hero-mobile.jpg');
+        padding: 120px 5% 0;
+        background-attachment: scroll;
+        min-height: 500px;
+        height: clamp(500px, 70vh, 600px);
+        padding: 0;
+        text-align: center;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .hero-content {
+        position: absolute;
+        bottom: 2rem; /* Cambiado de 1rem a 2rem para subir más el contenido */
+        left: 0;
+        right: 0;
+        padding: 0 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-hero {
+        padding: 0.7rem 1.8rem; /* Aumentado de 0.5rem 1.4rem */
+        font-size: 0.9rem; /* Aumentado de 0.8rem */
+    }
+
+    .rto-checker {
+        padding-top: 1rem; /* Reducido para compensar la nueva posición */
+    }
+}

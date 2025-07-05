@@ -1,0 +1,122 @@
+/* ===== CERTIFICATION SECTION ===== */
+.certification {
+    background-color: var(--color-background);
+    padding: var(--section-padding);
+}
+
+.certification__title {
+    text-align: center;
+    font-size: var(--title-size);
+    margin-bottom: 3rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.certification__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.certification .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.certification__content {
+    background: var(--color-background-alt);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.certification__content:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.certification__text {
+    padding: 1.5rem;
+}
+
+.certification__content p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.certification__content p:last-child {
+    margin-bottom: 0;
+}
+
+.certification__image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.certification__image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.certification__image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .certification {
+        padding: var(--section-padding-mobile);
+    }
+    
+    .certification .container {
+        padding: 0 1rem;
+    }
+    
+    .certification__text {
+        padding: 1.25rem;
+    }
+
+    .certification__content p {
+        font-size: 0.95rem;
+    }
+
+    .certification__image {
+        padding: 0 1.25rem 1.25rem;
+    }
+
+    .certification__image img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certification__text {
+        padding: 1rem;
+    }
+
+    .certification__image {
+        padding: 0 1rem 1rem;
+    }
+
+    .certification__image img {
+        max-width: 250px;
+    }
+}

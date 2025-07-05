@@ -1,0 +1,60 @@
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 6.5rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    font-size: 2.2rem;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover, .whatsapp-float:focus {
+    background: #1ebe57;
+    color: #fff;
+    transform: translateY(-3px) scale(1.07);
+    outline: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Desktop: alineado con toggle flotante y back-to-top */
+@media (min-width: 769px) {
+  .whatsapp-float {
+    bottom: calc(2rem + 56px * 2 + 2.4rem);
+    right: 2rem;
+    z-index: 1002;
+  }
+}
+
+/* Mobile: alineado encima del back-to-top */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: calc(20px + 50px + 8px);
+        right: 20px;
+        font-size: 1.8rem;
+        z-index: 1002;
+    }
+}
+
+/* Extra pequeño: dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+    bottom: calc(15px + 46px + 8px);
+    right: 15px;
+    font-size: 1.6rem;
+  }
+}

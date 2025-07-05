@@ -1,0 +1,223 @@
+/* ===== PRICING SECTION ===== */
+.turno--lista--de--precios {
+    background-color: var(--color-background);
+    padding: var(--section-padding);
+}
+
+.turno__title {
+    text-align: center;
+    font-size: var(--title-size);
+    margin-bottom: 3rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.turno__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.tabla {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.tabla__header {
+    display: none;
+}
+
+.tabla__row {
+    background: var(--color-background-alt);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    margin-bottom: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tabla__row:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.tipo--vehiculo {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 600;
+    margin: 0;
+}
+
+.tipo--vehiculo small {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 400;
+}
+
+.precio {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.reserva {
+    text-align: right;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.link__turno {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(79, 134, 247, 0.3);
+    white-space: nowrap;
+    min-width: 140px;
+}
+
+.link__turno:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(79, 134, 247, 0.4);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .turno--lista--de--precios {
+        padding: var(--section-padding-mobile);
+    }
+
+    .tabla {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .tabla__row {
+        padding: 1.25rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .price-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .reserva {
+        text-align: center;
+        width: 100%;
+    }
+
+    .tipo--vehiculo {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .precio {
+        font-size: 1.2rem;
+    }
+
+    .link__turno {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 250px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .turno__title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tabla__row {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    .price-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .tipo--vehiculo {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .tipo--vehiculo small {
+        font-size: 0.8rem;
+    }
+
+    .precio {
+        font-size: 1.1rem;
+    }
+
+    .reserva {
+        width: 100%;
+        text-align: center;
+    }
+
+    .link__turno {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
+/* Media query adicional para dispositivos muy pequeños */
+@media (max-width: 360px) {
+    .turno__title {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}

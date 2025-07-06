@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# Solo proxy, sin headers CORS (el backend ya los maneja)
-RewriteRule ^(.*)$ https://179.43.126.137/api/$1 [P,L]
